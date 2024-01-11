@@ -36,6 +36,7 @@ links.onclick = games.onclick = buttonPress;
 
 function buttonPress(event) {
     if(event.target.id == "linksButton") {
+        window.open("links/links.html", "_self");
     } else if (event.target.id == "gamesButton") {
         window.open("games/games.html","_self");
     }
