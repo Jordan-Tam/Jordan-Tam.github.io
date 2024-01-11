@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    height: inherit;
+
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#promptDiv {
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+#buttonDiv {
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+div div, div button {
+    height: 5rem;
+    width: 5rem;
+}
+
+#prompt {
+    background-color: orange;
+}
+
+#prompt2 {
+    background-color: purple;
+}
+
+#prompt3 {
+    background-color: green;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    border: 5px solid black;
+}
+
+/* button:active {
+    border: 5px solid gray;
+} */
+
+#red {
+    background-color: red;
+}
+
+/* #red:hover {
+    background-color: rgba(255, 0, 0, 0.75);
+} */
+
+#red:active {
+    background-color:rgba(255, 0, 0, 0.5)
+}
+
+#blue {
+    background-color: blue;
+}
+
+/* #blue:hover {
+    background-color: rgba(0, 0, 255, 0.75);
+} */
+
+#blue:active {
+    background-color:rgba(0, 0, 255, 0.5)
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+/* #yellow:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+} */
+
+#yellow:active {
+    background-color:rgba(255, 255, 0, 0.25);
+}
+
+p {
+    font-size: 5rem;
+}

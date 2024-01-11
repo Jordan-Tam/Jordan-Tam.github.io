@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    user-select: none;
+}
+
+body {
+    height: inherit;
+    /* Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#maze {
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows:    33.3% 33.3% 33.3%;
+}
+
+.square {
+    background-color: white;
+    _border: 5px solid black;
+    height: 100px;
+    width:  100px;
+
+    /* Center the START and END text. */
+    text-align: center; /* Centers the text horizontally. */
+    line-height: 100px; /* Setting the line height to be the same as the height centers the text vertically. */
+}
+
+#controls {
+    /* CSS Grid */
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows:    33.3% 33.3% 33.3%;
+}
+
+.arrowKeys, .blankSpace {
+    background-color: white;
+    border: none;
+    height: 100px;
+    width: 100px;
+    font-size: 5rem;
+    text-align: center;
+}
+
+#upHand:active {
+    transform: translateY(-20px);
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}
+
+#downHand:active {
+    transform: translateY(20px);
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}
+
+#leftHand:active {
+    transform: translateX(-20px);
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}
+
+#rightHand:active {
+    transform: translateX(20px);
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}

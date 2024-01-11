@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit; /* inherited from "html" selector */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    display: flex;
+    gap: 3rem;
+}
+
+button {
+    height:    10rem;
+    width:     10rem;
+    font-size:  5rem;
+}

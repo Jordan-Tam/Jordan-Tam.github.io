@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    /** FONT SIZES */
+    --XS:  0.5rem;
+    --S:   1rem;
+    --M:   2rem;
+    --L:   3rem;
+    --XL:  4rem;
+    --XXL: 5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    overflow-x: hidden; /** Hides horizontal scrollbar. */
+    overflow-y: scroll; /** Stops content from repositioning when vertical scrollbar appears. */
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: inherit;
+    justify-content: center;
+    user-select: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    border: white!important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(112, 106, 106);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ! HEADER ------------------------------- */
+.header {
+    text-align: center;
+}
+
+.header__h1 {
+    margin-bottom: 15px;
+}
+
+.header__button {
+    background-color: white;
+    border: none;
+    font-family: inherit;
+}
+
+.header__button:focus {
+    outline: none;
+}
+
+/* ! CONTAINER FOR TILES AND LETTER BUTTONS */
+
+.container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ! TILES -------------------------------- */
+
+
+.tile {
+    border-bottom: 2px solid black;
+    display: inline-block;
+    font-size: var(--XXL);
+    min-height: 90.667px;
+    min-width: 50px; /** 48.010px */
+    text-align: center;
+}
+
+.tile--focused {
+    border-bottom: 2px solid red;
+}
+
+/* ! LETTER BUTTONS ----------------------- */
+
+.container__button {
+    background-color: white;
+    color: black;
+
+    font-family: inherit;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ! TIME TABLE --------------------------- */
+
+.timetableDiv {
+    font-family: "Open Sans";
+    height: 250px;
+}
+
+.timetableDiv__table {
+    border-collapse: collapse;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+td, th {
+    padding: 10px 20px;
+    text-align: center;
+    width: 150px;
+}
+
+
+
+/* ! MODIFIER CLASSES --------------------- */
+
+.smallText {
+    font-size: var(--S);
+}
+
+.mediumText {
+    font-size: var(--M);
+}
+
+.largeText {
+    font-size: var(--L);
+}
+
+.xLargeText {
+    font-size: var(--XL);
+}
+
+.xxLargeText {
+    font-size: var(--XXL);
+}
+
+.squadaOneFont {
+    font-family: "Squada One";
+}

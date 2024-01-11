@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    height: inherit;
+
+    /** Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /** Animation */
+    animation: whiteToBlack 3s ease-in-out 1 forwards;
+}
+
+#container {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15rem;
+
+    /** Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /** Animation */
+    animation: blackToWhite 3s ease-in-out 1 forwards;
+}
+
+#container > .letterContainer {
+    transition: transform 1s ease;
+}
+
+#container:hover {
+    height: inherit;
+    width: 80%;
+}
+
+#container:hover > .letterContainer {
+    transition-duration: 0.7s;
+}
+
+#container:hover > .letterContainer:nth-child(1) { /* D */
+    transform: translate(-80%, 75%) rotate(8deg);
+}
+
+#container:hover > .letterContainer:nth-child(2) { /* O */
+    transform: translate(-20%, -100%) rotate(180deg);
+}
+
+#container:hover > .letterContainer:nth-child(3) { /* W */
+    transform: translate(-10%, 60%) rotate(7deg);
+}
+
+#container:hover > .letterContainer:nth-child(4) { /* N */
+    transform: translate(4%, -10%) rotate(-12deg);
+}
+
+#container:hover > .letterContainer:nth-child(5) { /* W */
+    transform: translate(16%, -54%) rotate(10deg);
+}
+
+#container:hover > .letterContainer:nth-child(6) { /* A */
+    transform: translate(0%, 95%) rotate(-15deg);
+}
+
+#container:hover > .letterContainer:nth-child(7) { /* R */
+    transform: translate(50%, 50%) rotate(35deg);
+}
+
+#container:hover > .letterContainer:nth-child(8) { /* D */
+    transform: translate(80%, -30%) rotate(-45deg);
+}
+
+#container:hover > .letterContainer:hover {
+    text-shadow: 0 0 35px #f13838, 0 0 35px #f13838;
+}
+
+#container:hover > .letterContainer:active {
+    animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 35px #d0c00e, 0 0 35px #d0c00e;
+    }
+    to {
+        text-shadow: 0 0 35px #8b38f1, 0 0 35px #8b38f1;
+    }
+}
+
+@keyframes whiteToBlack {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes blackToWhite {
+    from {
+        color: black;
+    }
+    to {
+        color: white;
+    }
+}
+
+
+
+/* TODO: media queries */
+
+
+/*
+https://stackoverflow.com/questions/5890948/css-transform-without-overwriting-previous-transform
+*/
+@keyframes float {
+    from, to {
+      transform: translateY(-0%);
+    }
+    
+    50% {    
+      transform: translateY(-3%);
+    }
+}
+
+#container:hover > .letterContainer > div {
+    animation: float 5s ease infinite;
+    animation-delay: 0.7s;
+}
+
+#container:hover > .letterContainer > #d {
+
+    animation: colorChange 10s ease infinite;
+}
+
+@keyframes colorChange {
+    0% {
+
+    }
+
+    12.5% {
+
+    }
+
+    25% {
+
+    }
+
+    37.5% {
+
+    }
+
+    50% {
+
+    }
+
+    62.5% {
+
+    }
+
+    75% {
+        
+    }
+
+    87.5% {
+
+    }
+
+}
+
+/*
+
+@keyframes colorChange {
+    0% {
+
+    }
+
+    12.5% {
+
+    }
+
+    25% {
+
+    }
+
+    37.5% {
+
+    }
+
+    50% {
+
+    }
+
+    62.5% {
+
+    }
+
+    75% {
+        
+    }
+
+    87.5% {
+
+    }
+    
+}
+
+*/

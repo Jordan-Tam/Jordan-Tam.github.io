@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    overflow-x: none;
+    overflow-y: none;
+    user-select: none;
+}
+
+body {
+    height: inherit;
+
+    /** Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    font-size: 5rem;
+ 
+    /** Gradient text */
+    --no-hover-one: rgb(210, 210, 210);
+    --no-hover-two: rgb(88, 88, 88);
+    background-clip: text!important;
+    -webkit-background-clip: text!important;
+    color: transparent;
+    background-image: linear-gradient(
+                            90deg,
+                            var(--no-hover-one), 
+                            var(--no-hover-two),
+                            var(--no-hover-one)
+                      );
+    background-position-x: 0;
+    background-position-y: 0;
+    background-size: 400% 100%;
+
+    /** Moving gradient text */
+    animation: movingGradient 25s infinite linear;
+}
+
+#linksButton:hover {
+    --links-hover-one: red;
+    --links-hover-two: blue;
+    background: linear-gradient(
+                    90deg,
+                    red,
+                    blue,
+                    red
+                )
+                0 0 / 400% 100%;
+}
+
+#linksButton:active {
+    font-weight: 500;
+}
+
+#gamesButton:hover {
+    --games-hover-one: rgb(241, 191, 7);
+    --games-hover-two: rgb(9, 221, 172);
+    background: linear-gradient(
+                    90deg,
+                    var(--games-hover-one), 
+                    var(--games-hover-two),
+                    var(--games-hover-one)
+                ) 
+                0 0 / 400% 100%;
+
+}
+
+#gamesButton:active {
+    font-weight: 500;
+}
+
+@keyframes movingGradient {
+    to {
+        background-position: 400% 0;
+    }
+}
