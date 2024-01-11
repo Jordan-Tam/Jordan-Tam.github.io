@@ -35,6 +35,7 @@ window.onresize = keepMenuCentered;
 links.onclick = games.onclick = buttonPress;
 
 function buttonPress(event) {
+    console.log(event.target.id);
     if(event.target.id == "linksButton") {
         window.open("links/links.html", "_self");
     } else if (event.target.id == "gamesButton") {
